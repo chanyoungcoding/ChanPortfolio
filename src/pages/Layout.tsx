@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router-dom'
 import styled from 'styled-components'
+import { Example } from '../components/NavbarToggle/Example'
 
 const Layout = () => {
   return (
     <>
+      <Example/>
       <Navbar>
         <Title>Chan</Title>
         <p>010-8510-6425</p>

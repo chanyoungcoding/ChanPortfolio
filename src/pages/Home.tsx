@@ -27,6 +27,7 @@ const Home = () => {
               <ReavealBox/>
               <ChanImageBox src={ChanImg}/>
               <Circle/>
+              <ArrowText>⇣ 스크롤을 내려보세요.</ArrowText>
             </IntroBox>
           </FullpageSection>
 
@@ -100,6 +101,12 @@ const Circle = styled.div`
   height: 1500px;
   background-color: rgba(255,255,255,0.1);
   border-radius: 100%;
+`
+
+const ArrowText = styled.p`
+  position: absolute;
+  bottom: -200px;
+  right: 44%;
 `
 
 const SkillText = styled.p`

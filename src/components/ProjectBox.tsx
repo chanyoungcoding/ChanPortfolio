@@ -108,6 +108,10 @@ const ProjectTitle = styled.h1`
   padding-bottom: 30px;
   font-size: 4rem;
   font-weight: bold;
+  @media screen and (max-width: 1300px) {
+    padding: 0;
+    text-align: center;
+  }
 `;
 
 const ProjectContainer = styled.div`

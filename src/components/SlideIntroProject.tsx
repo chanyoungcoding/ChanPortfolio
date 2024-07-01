@@ -9,7 +9,7 @@ interface ProjectData {
 }
 
 const SlideIntroProject:React.FC<ProjectData> = ({day, name, url, intro}) => {
-  console.log(url)
+
   const goToUrl = () => {
     window.open(url, '_blank', 'noopener,noreferrer');
   }
@@ -64,6 +64,19 @@ const Container = styled.div`
     outline: none;
     border: none;
     cursor: pointer;
+  }
+  @media screen and (max-width: 1300px) {
+    flex-direction: column;
+    h2 {
+      padding: 10px 0px;
+    }
+    h1 {
+      padding: 10px 0px;
+    }
+    p {
+      width: auto;
+      padding: 0;
+    }
   }
 `
 

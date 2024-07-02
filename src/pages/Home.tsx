@@ -13,6 +13,7 @@ import BackSkillsBox from "../components/BackSkillsBox";
 import LastSkillsBox from "../components/LastSkillsBox";
 import ProjectBox from "../components/ProjectBox";
 import Achieving from "../components/Achieving";
+import RightToLeftInfinityScroll from "../components/RightToLeftInfinityScroll";
 
 const Home = () => {
 
@@ -29,6 +30,7 @@ const Home = () => {
               <Circle/>
               <ArrowText>⇣ 스크롤을 내려보세요.</ArrowText>
             </IntroBox>
+            <RightToLeftInfinityScroll/>
           </FullpageSection>
 
           <FullpageSection style={{height: '100vh'}}>
@@ -70,7 +72,7 @@ const IntroBox = styled.div`
   justify-content: center;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
 `
 
 const ChanImageBox = styled.img`
@@ -105,7 +107,7 @@ const Circle = styled.div`
 
 const ArrowText = styled.p`
   position: absolute;
-  bottom: -200px;
+  bottom: -250px;
   right: 44%;
 `
 

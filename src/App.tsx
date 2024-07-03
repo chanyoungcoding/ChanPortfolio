@@ -11,6 +11,7 @@ import About from './pages/About'
 import Login from './pages/Login'
 import Project from './pages/Project'
 import NotFound from './pages/Not-found'
+import Test from './pages/Test'
 
 const router = createBrowserRouter([
   {
@@ -22,16 +23,20 @@ const router = createBrowserRouter([
         element: <Home/>
       },
       {
-        path: "about",
-        element: <About/>
-      },
-      {
         path: "project",
         element: <Project/>
       }
     ]
   },
 
+  {
+    path: "about",
+    element: <About/>
+  },
+  {
+    path: "test",
+    element: <Test/>
+  },
   {
     path: "/login",
     element: <Login/>

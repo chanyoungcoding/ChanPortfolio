@@ -1,66 +1,88 @@
-import { useInView } from "react-intersection-observer"
-import styled, { keyframes } from "styled-components"
+import { useLayoutEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import styled from 'styled-components';
 
+// GSAP 플러그인 등록
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const boxRef = useRef(null);
 
-  const { ref, inView } = useInView({
-    threshold: 0.5
-  })
+  useLayoutEffect(() => {
+    if (boxRef.current) { 
+      gsap.to(boxRef.current, { 
+        x: 300, 
+        opacity: 1,
+        scrollTrigger: {
+          trigger: boxRef.current, 
+          start: 'top bottom',
+          end: 'top 20%', 
+          scrub: true, 
+        },
+      });
+    }
+
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   return (
     <Container>
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box />
-      <Box1 ref={ref} style={{ animationPlayState: inView ? 'running' : 'paused' }}/>
+      <Box></Box>
+      <section className="section flex-center column">
+        <h2>Basic ScrollTrigger with React</h2>
+        <p>Scroll down to see the magic happen!!</p>
+      </section>
+      <div className="section flex-center column">
+        <div className="box gradient-blue" ref={boxRef}>box</div> 
+      </div>
+      <section className="section"></section>
     </Container>
-  )
+  );
 }
 
+const Box = styled.div`
+  height: 100vh;
+  background-color: aliceblue;
+`
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 200px;
-`
+  height: 2000px;
+  .section {
+    padding: 50px 0;
+    text-align: center;
+  }
 
-//animation 
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-const autoAnimation = keyframes`
+  .column {
+    flex-direction: column;
+  }
 
-  from {
+  .box {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
-    transform: translateY(20px);
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .gradient-blue {
+    background: linear-gradient(135deg, #1e90ff, #00bfff);
   }
+
 `
 
-const Box = styled.div`
-  width: 500px;
-  height: 500px;
-  margin: 30px;
-  background-color: #006dcd;
-`
-
-const Box1 = styled.div`
-  width: 500px;
-  height: 500px;
-  margin: 30px;
-  background-color: #006dcd;
-  opacity: 0; // 기본값을 0으로 설정하여 보이지 않도록 함
-  animation: ${autoAnimation} 1s forwards;
-  animation-play-state: paused; // 기본적으로 애니메이션이 일시 중지 상태로 설정
-`
-
-
-export default About
+export default About;
 

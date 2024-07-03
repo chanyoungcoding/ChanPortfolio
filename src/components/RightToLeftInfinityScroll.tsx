@@ -2,6 +2,9 @@ import styled, { keyframes } from "styled-components"
 
 import CoffeeProject from "../assets/ProjectCoffee.png";
 import Opet from "../assets/opet.png";
+import CoffeeBalance from "../assets/coffeeBalance.png";
+import ChanMovie from "../assets/chanMovie.png";
+import LastProject from "../assets/lastProject.png";
 
 const RightToLeftInfinityScroll = () => {
 
@@ -16,15 +19,15 @@ const RightToLeftInfinityScroll = () => {
     },
     {
       num: 3,
-      url: CoffeeProject
+      url: CoffeeBalance
     },
     {
       num: 4,
-      url: CoffeeProject
+      url: ChanMovie
     },
     {
       num: 5,
-      url: CoffeeProject
+      url: LastProject
     },
   ]
   

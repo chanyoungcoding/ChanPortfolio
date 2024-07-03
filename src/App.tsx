@@ -10,6 +10,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Login from './pages/Login'
 import Project from './pages/Project'
+import NotFound from './pages/Not-found'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login/>
+  },
+  {
+    path: "*",
+    element: <NotFound/>
   }
 ])
 

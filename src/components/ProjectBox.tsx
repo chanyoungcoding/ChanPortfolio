@@ -13,7 +13,7 @@ const ProjectBox = () => {
   const [num, setNum] = useState(1);
 
   const onClickNextSwiper = () => {
-    if(num >= 2) return;
+    if(num >= 3) return;
     setNum(prev => prev + 1)
   }
 
@@ -56,26 +56,38 @@ const ProjectBox = () => {
         <SwiperSlide>
           <ProjectContainer>
             <SlideIntroProject
-              day={ProjectInformationData[0].day}
-              name={ProjectInformationData[0].name}
-              url={ProjectInformationData[0].url}
-              intro={ProjectInformationData[0].intro}
+              day={ProjectInformationData[2].day}
+              name={ProjectInformationData[2].name}
+              url={ProjectInformationData[2].url}
+              intro={ProjectInformationData[2].intro}
             />
             <SlideIntroProject
-              day={ProjectInformationData[0].day}
-              name={ProjectInformationData[0].name}
-              url={ProjectInformationData[0].url}
-              intro={ProjectInformationData[0].intro}
+              day={ProjectInformationData[3].day}
+              name={ProjectInformationData[3].name}
+              url={ProjectInformationData[3].url}
+              intro={ProjectInformationData[3].intro}
             />
           </ProjectContainer>
         </SwiperSlide>
+
+        <SwiperSlide>
+          <ProjectContainer>
+            <SlideIntroProject
+              day={ProjectInformationData[4].day}
+              name={ProjectInformationData[4].name}
+              url={ProjectInformationData[4].url}
+              intro={ProjectInformationData[4].intro}
+            />
+          </ProjectContainer>
+        </SwiperSlide>
+
       </Swiper>
 
       <SwiperButtonPrev onClick={onClickPrevSwiper} className="swiper-button-prev"></SwiperButtonPrev>
       <SwiperButtonNext onClick={onClickNextSwiper} className="swiper-button-next"></SwiperButtonNext>
       
       <SlideNavigation>
-        <p>{num} / 2</p> 
+        <p>{num} / 3</p> 
       </SlideNavigation>
     </Container>
   );

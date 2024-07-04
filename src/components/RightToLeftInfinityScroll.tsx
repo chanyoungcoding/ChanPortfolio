@@ -54,7 +54,7 @@ const ProjectImg = styled.img`
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 300px;
+  padding-top: 230px;
 `
 
 const Wrapper = styled.div`

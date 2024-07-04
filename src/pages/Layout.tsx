@@ -1,13 +1,20 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { Example } from '../components/NavbarToggle/Example'
 
 const Layout = () => {
+
+  const navigate = useNavigate();
+
+  const onClickChan = () => {
+    navigate('/');
+  }
+
   return (
     <>
       <Example/>
       <Navbar>
-        <Title>Chan</Title>
+        <Title onClick={onClickChan}>Chan</Title>
         <p>010-8510-6425</p>
         <p>white1614@naver.com</p>
       </Navbar>
@@ -32,6 +39,7 @@ const Title = styled.h1`
   margin-right: 100px;
   font-size: 2rem;
   color: #5046e6;
+  cursor: pointer;
 `
 
 export default Layout

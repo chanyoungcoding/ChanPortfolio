@@ -9,7 +9,6 @@ import Layout from './pages/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Login from './pages/Login'
-import Project from './pages/Project'
 import NotFound from './pages/Not-found'
 import Test from './pages/Test'
 
@@ -21,10 +20,6 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home/>
-      },
-      {
-        path: "project",
-        element: <Project/>
       },
       {
         path: "about",

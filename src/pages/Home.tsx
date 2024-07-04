@@ -1,6 +1,8 @@
 //@ts-expect-error You can ignore this error 
 import Fullpage ,{FullPageSections, FullpageSection, FullpageNavigation } from "@ap.cx/react-fullpage";
 import styled from 'styled-components'
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 import KeyboardBackground from "../assets/keyboardBackground.png";
 
@@ -17,6 +19,15 @@ import RightToLeftInfinityScroll from "../components/RightToLeftInfinityScroll";
 
 const Home = () => {
 
+  useGSAP(() => {
+    gsap.to(".arrow", {
+      y: -10,
+      repeat: -1,     // 무한히 반복
+      yoyo: true,    // 앞뒤로 애니메이션 반복
+      duration: 1   // 애니메이션 시간 설정
+    })
+  })
+
   return (
     <Container>
       <Fullpage>
@@ -28,7 +39,7 @@ const Home = () => {
               <ReavealBox/>
               <ChanImageBox src={ChanImg}/>
               <Circle/>
-              <ArrowText>⇣ 스크롤을 내려보세요.</ArrowText>
+              <ArrowText className="arrow">⇣ 스크롤을 내려보세요.</ArrowText>
             </IntroBox>
             <RightToLeftInfinityScroll/>
           </FullpageSection>
@@ -107,8 +118,8 @@ const Circle = styled.div`
 
 const ArrowText = styled.p`
   position: absolute;
-  bottom: -250px;
-  right: 44%;
+  bottom: -220px;
+  text-align: center;
 `
 
 const SkillText = styled.p`

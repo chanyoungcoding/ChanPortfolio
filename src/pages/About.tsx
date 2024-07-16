@@ -98,6 +98,7 @@ const About = () => {
         <p className='p_text'>훗날 저는 유명 회사에 CTO 가 될 것입니다.</p>
         <p className='p_text'>나중에 100만명이 사용하는 사이트를 만들것입니다.</p>
         <p className='p_text'>개발을 어떻게 해야 할지 모르는 분들의 길잡이가 되고 싶습니다.</p>
+        <p className='p_text'>쉬운 개발 유튜브 강의를 통해 개발의 즐거움을 공유하고 싶습니다.</p>
       </DreamBox>
 
       <BookBox>

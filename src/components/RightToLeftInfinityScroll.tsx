@@ -83,11 +83,13 @@ const Wrapper = styled.div`
   );
 
   // animation boxs
-  .box_1 { animation-delay: calc(30s / 5 * (5 - 1) * -1)}
-  .box_2 { animation-delay: calc(30s / 5 * (5 - 2) * -1)}
-  .box_3 { animation-delay: calc(30s / 5 * (5 - 3) * -1)}
-  .box_4 { animation-delay: calc(30s / 5 * (5 - 4) * -1)}
-  .box_5 { animation-delay: calc(30s / 5 * (5 - 5) * -1)}
+  .box_1 { animation-delay: calc(36s / 6 * (6 - 1) * -1)}
+  .box_2 { animation-delay: calc(36s / 6 * (6 - 2) * -1)}
+  .box_3 { animation-delay: calc(36s / 6 * (6 - 3) * -1)}
+  .box_4 { animation-delay: calc(36s / 6 * (6 - 4) * -1)}
+  .box_5 { animation-delay: calc(36s / 6 * (6 - 5) * -1)}
+  .box_6 { animation-delay: calc(36s / 6 * (6 - 6) * -1)}
+
 `
 
 // animation
@@ -100,12 +102,12 @@ const scrollLeft = keyframes`
 
 const Box = styled.div`
   position: absolute;
-  width: 200px;
+  width: 190px;
   height: 100px;
   background-color: #006dcd;
   left: 1000px;
   border-radius: 10px;
-  animation: ${scrollLeft} 30s linear infinite;
+  animation: ${scrollLeft} 36s linear infinite;
 `
 
 export default RightToLeftInfinityScroll

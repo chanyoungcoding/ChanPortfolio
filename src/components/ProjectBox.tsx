@@ -78,6 +78,12 @@ const ProjectBox = () => {
               url={ProjectInformationData[4].url}
               intro={ProjectInformationData[4].intro}
             />
+            <SlideIntroProject
+              day={ProjectInformationData[5].day}
+              name={ProjectInformationData[5].name}
+              url={ProjectInformationData[5].url}
+              intro={ProjectInformationData[5].intro}
+            />
           </ProjectContainer>
         </SwiperSlide>
 

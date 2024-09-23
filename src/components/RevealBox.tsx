@@ -43,7 +43,7 @@ const ReavealBox = () => {
           <AboutButton onClick={onClickAbout}>
             <p>제가 더 궁금하시면 클릭해 주세요.</p>
           </AboutButton>
-          <TfiLocationArrow className="arrow" size={24} color="#5046e6"/>
+          <TfiLocationArrow className="arrow" size={24} color="#5046e6" />
         </AboutBox>
       </BoxReveal>
 

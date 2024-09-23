@@ -5,6 +5,7 @@ import Opet from "../assets/opet.png";
 import CoffeeBalance from "../assets/coffeeBalance.png";
 import ChanMovie from "../assets/chanMovie.png";
 import LastProject from "../assets/lastProject.png";
+import MapleMInfo from "../assets/mapleMInfo.png";
 
 const RightToLeftInfinityScroll = () => {
 
@@ -27,8 +28,12 @@ const RightToLeftInfinityScroll = () => {
     },
     {
       num: 5,
-      url: LastProject
+      url: MapleMInfo
     },
+    {
+      num:6,
+      url: LastProject
+    }
   ]
   
   return (

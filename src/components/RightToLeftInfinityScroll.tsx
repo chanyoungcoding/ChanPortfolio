@@ -96,7 +96,7 @@ const Wrapper = styled.div`
 
 const scrollLeft = keyframes`
   to {
-    left: -200px;
+    left: -190px;
   }
 `
 

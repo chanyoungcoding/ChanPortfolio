@@ -8,7 +8,6 @@ import { auth } from './firebase'
 import Layout from './pages/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
-import Login from './pages/Login'
 import NotFound from './pages/Not-found'
 import Test from './pages/Test'
 
@@ -31,10 +30,6 @@ const router = createBrowserRouter([
   {
     path: "test",
     element: <Test/>
-  },
-  {
-    path: "/login",
-    element: <Login/>
   },
   {
     path: "*",

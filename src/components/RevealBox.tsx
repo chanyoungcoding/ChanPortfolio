@@ -15,7 +15,7 @@ const ReavealBox = () => {
 
   useGSAP(() => {
     gsap.to(".arrow", {
-      y: -10,
+      y: -20,
       repeat: -1,     // 무한히 반복
       yoyo: true,    // 앞뒤로 애니메이션 반복
       duration: 1   // 애니메이션 시간 설정

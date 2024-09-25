@@ -104,6 +104,12 @@ const ChanImageBox = styled.img`
     top: -70px;
     right: 60px;
   }
+  @media screen and (max-width: 430px){
+    width: 150px;
+    height: 150px;
+    top: -20px;
+    right: 30px;
+  }
   @media screen and (max-width: 390px){
     width: 130px;
     height: 130px;

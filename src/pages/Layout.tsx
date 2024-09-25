@@ -33,6 +33,11 @@ const Navbar = styled.div`
     color: gray;
     margin-right: 100px;
   }
+  @media screen and (max-width: 450px){
+    p {
+      display: none;
+    }
+  }
 `
 
 const Title = styled.h1`
@@ -40,6 +45,9 @@ const Title = styled.h1`
   font-size: 2rem;
   color: #5046e6;
   cursor: pointer;
+  @media screen and (max-width: 390px){
+    margin-right: 0px;
+  }
 `
 
 export default Layout

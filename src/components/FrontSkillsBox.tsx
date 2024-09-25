@@ -7,7 +7,7 @@ const FrontSkillsBox = () => {
       <SkillContainer>
         <p>
           HTML, css, JS, React.js, Next.js, React-native, TypeScript, <br/>
-          React query, Redux, recoil, Scss, styled-components, <br/>
+          React query, Redux, Redux-toolkit , recoil, zustand , SCSS, styled-components, tailwindCSS <br/>
           axios, emotion, gsap...
         </p>
       </SkillContainer>

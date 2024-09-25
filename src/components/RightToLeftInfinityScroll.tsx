@@ -60,6 +60,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 230px;
+  @media screen and (max-width: 390px){
+    padding-top: 10px;
+  }
 `
 
 const Wrapper = styled.div`

@@ -104,6 +104,12 @@ const ChanImageBox = styled.img`
     top: -70px;
     right: 60px;
   }
+  @media screen and (max-width: 390px){
+    width: 130px;
+    height: 130px;
+    top: 60px;
+    right: 10px;
+  }
 `
 
 const Circle = styled.div`
